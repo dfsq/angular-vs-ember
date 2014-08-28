@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/styles/app.css" />
+	<title>Angular vs Ember</title>
+</head>
+<body ng-app="angularEmber" ng-controller="appController">
+
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Angular vs Ember</a>
+		</div>
+
+		<div class="container">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#/questions">Questions</a></li>
+				<li><a href="#/followers">Followers</a></li>
+				<li><a href="#/badges">Badges</a></li>
+				<li><a href="#/frequency">Frequency</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<div ng-view></div>
+</div>
+
+
+<!-- buildjs: vendors.js -->
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/d3/d3.min.js"></script>
+<script src="../bower_components/angular-charts/dist/angular-charts.min.js"></script>
+<!-- buildjs -->
+
+<!-- buildjs: scripts.js -->
+<script src="app.config.js"></script>
+<script src="app.controller.js"></script>
+
+<script src="questions/questions.config.js"></script>
+<script src="questions/questions.controller.js"></script>
+
+<script src="followers/followers.config.js"></script>
+<script src="followers/followers.controller.js"></script>
+<!-- buildjs -->
+
+</body>
+</html>

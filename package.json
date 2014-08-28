@@ -1,0 +1,15 @@
+{
+	"name": "angular-vs-ember",
+	"version": "0.0.1",
+	"description": "AngularJS vs EmberJS comparison based on Stackoverflow stats.",
+	"dependencies": {},
+	"devDependencies": {
+		"karma": "^0.12.19",
+		"karma-cli": "^0.0.4",
+		"karma-jasmine": "~0.2.0",
+		"karma-phantomjs-launcher": "^0.1.4"
+	},
+	"scripts": {
+		"test": "grunt test"
+	}
+}
