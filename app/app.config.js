@@ -13,6 +13,7 @@
 		'ngRoute',
 		'angularCharts',
 		'angularEmber.questions',
+		'angularEmber.answers',
 		'angularEmber.followers'
 	], config);
 })();

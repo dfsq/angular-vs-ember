@@ -10,7 +10,7 @@
 	<!-- endbuild -->
 	<title>Angular vs Ember</title>
 </head>
-<body ng-app="angularEmber" ng-controller="appController">
+<body ng-app="angularEmber" ng-controller="appController as app">
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
@@ -26,9 +26,15 @@
 
 		<div class="container">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#/questions">Questions</a></li>
-				<li><a href="#/answers">Answers</a></li>
-				<li><a href="#/followers">Followers</a></li>
+				<li ng-class="{active: app.isActive('/questions')}">
+					<a href="#/questions">Questions</a>
+				</li>
+				<li ng-class="{active: app.isActive('/answers')}">
+					<a href="#/answers">Answers</a>
+				</li>
+				<li ng-class="{active: app.isActive('/followers')}">
+					<a href="#/followers">Followers</a>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -51,6 +57,9 @@
 
 <script src="questions/questions.config.js"></script>
 <script src="questions/questions.controller.js"></script>
+
+<script src="answers/answers.config.js"></script>
+<script src="answers/answers.controller.js"></script>
 
 <script src="followers/followers.config.js"></script>
 <script src="followers/followers.controller.js"></script>

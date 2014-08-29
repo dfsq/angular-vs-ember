@@ -1,11 +1,13 @@
 (function () {
 	'use strict';
 
-	function appController($scope) {
-		//
+	function appController($location) {
+		this.isActive = function(path) {
+			return $location.path() === path;
+		};
 	}
 
-	appController.$inject = ['$scope'];
+	appController.$inject = ['$location'];
 
 	angular.module('angularEmber').controller('appController', appController);
 })();
