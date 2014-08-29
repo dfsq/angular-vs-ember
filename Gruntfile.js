@@ -21,10 +21,11 @@ module.exports = function(grunt) {
 		copy: {
 			build: {
 				files: [
+					{src: 'README.md', dest: './dist/README.md'},
 					{
 						expand: true,
 						cwd: './app',
-						src: ['./**/*.html', 'assets/images/**', 'README.md'],
+						src: ['./**/*.html', 'assets/images/**'],
 						dest: 'dist'
 					}
 				]
