@@ -9,12 +9,13 @@
 
 	config.$inject = ['$routeProvider'];
 
-	angular.module('angularEmber', [
+	angular.module('ae', [
 		'ngRoute',
 		'angularCharts',
-		'angularEmber.questions',
-		'angularEmber.answers',
-		'angularEmber.followers'
+		'ae.components.services',
+		'ae.questions',
+		'ae.answers',
+		'ae.followers',
 	], config);
 })();
 

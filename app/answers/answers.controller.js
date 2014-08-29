@@ -7,5 +7,5 @@
 
 	answersController.$inject = ['$scope'];
 
-	angular.module('angularEmber.answers').controller('answersController', answersController);
+	angular.module('ae.answers').controller('answersController', answersController);
 })();

@@ -5,3 +5,9 @@
 .navbar {
 	border-radius: 0;
 }
+
+/* Chart styles */
+.chart {
+	width: 400px;
+	height: 400px;
+}

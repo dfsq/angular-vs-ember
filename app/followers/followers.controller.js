@@ -7,5 +7,5 @@
 
 	followersController.$inject = ['$scope'];
 
-	angular.module('angularEmber.followers').controller('followersController', followersController);
+	angular.module('ae.followers').controller('followersController', followersController);
 })();

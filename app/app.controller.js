@@ -9,5 +9,5 @@
 
 	appController.$inject = ['$location'];
 
-	angular.module('angularEmber').controller('appController', appController);
+	angular.module('ae').controller('appController', appController);
 })();

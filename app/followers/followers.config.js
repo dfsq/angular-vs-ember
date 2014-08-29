@@ -10,5 +10,5 @@
 
 	config.$inject = ['$routeProvider'];
 
-	angular.module('angularEmber.followers', [], config);
+	angular.module('ae.followers', [], config);
 })();

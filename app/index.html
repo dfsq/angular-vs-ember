@@ -10,7 +10,7 @@
 	<!-- endbuild -->
 	<title>Angular vs Ember</title>
 </head>
-<body ng-app="angularEmber" ng-controller="appController as app">
+<body ng-app="ae" ng-controller="appController as app">
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
@@ -21,7 +21,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Angular vs Ember</a>
+			<a class="navbar-brand" href="#/questions">Angular vs Ember</a>
 		</div>
 
 		<div class="container">
@@ -54,6 +54,9 @@
 <!-- build:js assets/scripts/scripts.min.js -->
 <script src="app.config.js"></script>
 <script src="app.controller.js"></script>
+
+<script src="components/services/services.js"></script>
+<script src="components/services/stats-service.js"></script>
 
 <script src="questions/questions.config.js"></script>
 <script src="questions/questions.controller.js"></script>

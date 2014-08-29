@@ -10,5 +10,5 @@
 
 	config.$inject = ['$routeProvider'];
 
-	angular.module('angularEmber.answers', [], config);
+	angular.module('ae.answers', [], config);
 })();
