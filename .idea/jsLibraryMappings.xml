@@ -2,6 +2,7 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{angular-vs-ember node_modules}" />
+    <file url="PROJECT" libraries="{angular, angular-route, gruntjs-DefinitelyTyped}" />
   </component>
 </project>
 
