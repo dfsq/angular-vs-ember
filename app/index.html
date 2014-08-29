@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<!-- build:css assets/styles/vendors.css -->
 	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<!-- endbuild -->
+	<!-- build:css assets/styles/styles.css -->
 	<link rel="stylesheet" href="assets/styles/app.css" />
+	<!-- endbuild -->
 	<title>Angular vs Ember</title>
 </head>
 <body ng-app="angularEmber" ng-controller="appController">
@@ -23,9 +27,8 @@
 		<div class="container">
 			<ul class="nav navbar-nav">
 				<li class="active"><a href="#/questions">Questions</a></li>
+				<li><a href="#/answers">Answers</a></li>
 				<li><a href="#/followers">Followers</a></li>
-				<li><a href="#/badges">Badges</a></li>
-				<li><a href="#/frequency">Frequency</a></li>
 			</ul>
 		</div>
 	</div>
@@ -36,14 +39,13 @@
 </div>
 
 
-<!-- buildjs: vendors.js -->
+<!-- build:js assets/scripts/vendors.min.js -->
 <script src="../bower_components/angular/angular.min.js"></script>
 <script src="../bower_components/angular-route/angular-route.min.js"></script>
 <script src="../bower_components/d3/d3.min.js"></script>
 <script src="../bower_components/angular-charts/dist/angular-charts.min.js"></script>
-<!-- buildjs -->
-
-<!-- buildjs: scripts.js -->
+<!-- endbuild -->
+<!-- build:js assets/scripts/scripts.min.js -->
 <script src="app.config.js"></script>
 <script src="app.controller.js"></script>
 
@@ -52,7 +54,7 @@
 
 <script src="followers/followers.config.js"></script>
 <script src="followers/followers.controller.js"></script>
-<!-- buildjs -->
+<!-- endbuild -->
 
 </body>
 </html>
