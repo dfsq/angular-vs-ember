@@ -11,3 +11,13 @@
 	width: 400px;
 	height: 400px;
 }
+
+.ac-legend td {
+	padding: 0 5px 0 0;
+}
+
+/* Common screens */
+.stats-container h4 {
+	margin-top: 0;
+	text-decoration: underline;
+}

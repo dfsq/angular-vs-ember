@@ -1,13 +1,9 @@
 (function () {
 	'use strict';
 
-	function questionsController($scope, stats) {
+	function questionsController($scope, tagsData) {
 
-		$scope.data = [{count: 0}, {count: 0}];
-
-		stats.questionsInfo().then(function(data) {
-			$scope.data = data;
-		});
+		$scope.tagsData = tagsData;
 
 		// Chart configuration
 		$scope.chartConfig = {
@@ -21,18 +17,18 @@
 		};
 
 		$scope.chartData = {
-			series: ['Total', 'Unanswered'],
+			series: ['Total', 'Answered'],
 			data: [{
 				x: 'AngularJS',
-				y: [100, 500]
+				y: [tagsData[0].count, 0]
 			}, {
 				x: 'EmberJS',
-				y: [300, 100]
+				y: [tagsData[1].count, 0]
 			}]
 		};
 	}
 
-	questionsController.$inject = ['$scope', 'stats'];
+	questionsController.$inject = ['$scope', 'tagsData'];
 
 	angular.module('ae.questions').controller('questionsController', questionsController);
 

@@ -4,7 +4,12 @@
 	function config($routeProvider) {
 		$routeProvider.when('/questions', {
 			controller:  'questionsController',
-			templateUrl: 'questions/questions.html'
+			templateUrl: 'questions/questions.html',
+			resolve: {
+				tagsData: ['stats', function(stats) {
+					return stats.questionsInfo();
+				}]
+			}
 		});
 	}
 

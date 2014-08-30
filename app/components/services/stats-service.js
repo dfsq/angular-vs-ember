@@ -6,8 +6,13 @@
 	function stats($http) {
 		return {
 			questionsInfo: function() {
-				var tags = 'angularjs;emberjs';
-				return $http.get(base + '/2.2/tags/' + tags + '/info?order=asc&sort=name&site=stackoverflow').then(function(response) {
+				var tags = 'angularjs;emberjs',
+					config = {params: {
+						order: 'asc',
+						sort:  'name',
+						site:  'stackoverflow'
+					}};
+				return $http.get(base + '/2.2/tags/' + tags + '/info', config).then(function(response) {
 					return response.data.items;
 				});
 			}
