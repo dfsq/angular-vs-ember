@@ -7,6 +7,11 @@
 	border-radius: 0;
 }
 
+/* Header */
+.navbar .container h2 {
+	margin-bottom: 20px;
+}
+
 /* Chart styles */
 .chart {
 	width: 400px;
@@ -29,7 +34,10 @@
 .stats-container .note {
 	border-top: 1px #DDD solid;
 	padding-top: .7em;
-	margin-top: 3em;
+	margin-top: 2.5em;
 	font-size: 14px;
 	color: #333;
+}
+.stats-container .note b {
+	color: #666;
 }
