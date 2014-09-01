@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="assets/styles/styles.css">
 	<title>Angular vs Ember</title>
 </head>
-<body ng-app="angularEmber" ng-controller="appController">
+<body ng-app="ae" ng-controller="appController as app">
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
@@ -17,14 +17,20 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Angular vs Ember</a>
+			<a class="navbar-brand" href="#/questions">Angular vs Ember</a>
 		</div>
 
 		<div class="container">
 			<ul class="nav navbar-nav">
-				<li class="active"><a href="#/questions">Questions</a></li>
-				<li><a href="#/answers">Answers</a></li>
-				<li><a href="#/followers">Followers</a></li>
+				<li ng-class="{active: app.isActive('/questions')}">
+					<a href="#/questions">Questions</a>
+				</li>
+				<li ng-class="{active: app.isActive('/answers')}">
+					<a href="#/answers">Answers</a>
+				</li>
+				<li ng-class="{active: app.isActive('/followers')}">
+					<a href="#/followers">Followers</a>
+				</li>
 			</ul>
 		</div>
 	</div>
