@@ -1,12 +1,25 @@
-<h2>Questions</h2>
+<div class="screen-header">
+	<h2>Questions</h2>
+	<p class="info">The chart repersents statistics on the number of questions asked within main tags (<code><a href="http://stackoverflow.com/tags/angularjs/synonyms">angularjs</a></code> and <code><a href="http://stackoverflow.com/tags/ember.js/synonyms">ember.js</a></code>).</p>
+</div>
 
 <div class="row">
 	<div class="col-sm-6">
 		<div ac-chart="'bar'" ac-data="chartData" ac-config="chartConfig" id="chart" class="chart"></div>
 	</div>
 	<div class="col-sm-6 stats-container">
-		<h4>Stats</h4>
-		<p>AngularJS: {{tagsData[0].count | number}}</p>
-		<p>EmberJS: {{tagsData[1].count | number}}</p>
+		<h4>AngularJS</h4>
+		<p>Total questions: {{stats.total.angular | number}}</p>
+		<p>Answered: {{stats.answered.angular | number}}</p>
+		<p>With no answer: {{stats.noAnswer.angular | number}}</p>
+
+		<br/>
+
+		<h4>EmberJS</h4>
+		<p>Total questions: {{stats.total.ember | number}}</p>
+		<p>Answered: {{stats.answered.ember | number}}</p>
+		<p>With no answer: {{stats.noAnswer.ember | number}}</p>
+
+		<div class="note">Note: "answered" shows that those questions received at least one answer. However it doesn't mean that given answers are accepted.</div>
 	</div>
 </div>

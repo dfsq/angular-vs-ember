@@ -3,7 +3,26 @@
 
 	function questionsController($scope, tagsData) {
 
-		$scope.tagsData = tagsData;
+		console.log('TEST', tagsData);
+
+		var total = {
+			angular: tagsData.total[0].count,
+			ember:   tagsData.total[1].count
+		},
+		answered = {
+			angular: total.angular - tagsData.noAnswerAngular,
+			ember:   total.ember - tagsData.noAnswerEmber
+		},
+		noAnswer = {
+			angular: tagsData.noAnswerAngular,
+			ember:   tagsData.noAnswerEmber
+		};
+
+		$scope.stats = {
+			total: total,
+			answered: answered,
+			noAnswer: noAnswer
+		};
 
 		// Chart configuration
 		$scope.chartConfig = {
@@ -17,13 +36,13 @@
 		};
 
 		$scope.chartData = {
-			series: ['Total', 'Answered'],
+			series: ['Total', 'Answered', 'No answer'],
 			data: [{
 				x: 'AngularJS',
-				y: [tagsData[0].count, 0]
+				y: [total.angular, answered.angular, noAnswer.angular]
 			}, {
 				x: 'EmberJS',
-				y: [tagsData[1].count, 0]
+				y: [total.ember, answered.ember, noAnswer.ember]
 			}]
 		};
 	}

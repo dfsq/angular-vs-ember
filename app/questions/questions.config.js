@@ -7,7 +7,7 @@
 			templateUrl: 'questions/questions.html',
 			resolve: {
 				tagsData: ['stats', function(stats) {
-					return stats.questionsInfo();
+					return stats.questions();
 				}]
 			}
 		});
