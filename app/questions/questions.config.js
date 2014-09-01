@@ -2,7 +2,7 @@
 	'use strict';
 
 	function config($routeProvider) {
-		$routeProvider.when('/questions', {
+		$routeProvider.when('/', {
 			controller:  'questionsController',
 			templateUrl: 'questions/questions.html',
 			resolve: {

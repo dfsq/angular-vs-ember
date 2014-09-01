@@ -2,9 +2,7 @@
 	'use strict';
 
 	function config($routeProvider) {
-		$routeProvider.otherwise({
-			redirectTo: '/questions'
-		});
+		$routeProvider.otherwise({ redirectTo: '/' });
 	}
 
 	config.$inject = ['$routeProvider'];
@@ -15,7 +13,7 @@
 		'ae.components.services',
 		'ae.questions',
 		'ae.answers',
-		'ae.followers',
+		'ae.followers'
 	], config);
 })();
 
