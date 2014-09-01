@@ -15,7 +15,8 @@ module.exports = function(grunt) {
 
 		clean: {
 			pre: ['dist'],
-			post: ['dist/assets/scripts/vendors.js', 'dist/assets/scripts/scripts.js']
+			post: ['dist/assets/scripts/vendors.js', 'dist/assets/scripts/scripts.js'],
+			deploy: ['tmp']
 		},
 
 		copy: {
@@ -79,15 +80,17 @@ module.exports = function(grunt) {
 				},
 				command: function(message) {
 					return [
-						'cd dist',
+						'mkdir tmp',
+						'cd tmp',
 						'git init',
-						'git remote add origin https://github.com/dfsq/angular-vs-ember.git',
-						'git checkout --orphan gh-pages',
-						'git rm -rf .',
+						'git remote add -t gh-pages -f origin https://github.com/dfsq/angular-vs-ember.git',
+						'git checkout gh-pages',
+						'ls | grep -v ".git" | xargs rm -r',
+						'cp -r ../dist/* ./',
 						'git add .',
 						'git commit -m ' + message,
-						'git push -f origin gh-pages'
-					].join(' & ');
+						'git push origin gh-pages'
+					].join(' && ');
 				}
 			}
 		}
@@ -106,7 +109,9 @@ module.exports = function(grunt) {
 		if (!message) {
 			grunt.fail.warn('Provide commit message');
 		}
+		grunt.task.run('clean:deploy');
 		grunt.task.run('shell:deploy:"' + (message || '') + '"');
+		grunt.task.run('clean:deploy');
 	});
 
 	grunt.registerTask('default', ['build']);
