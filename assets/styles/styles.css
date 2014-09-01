@@ -1,3 +1,4 @@
+/* Bootsrap redefine */
 .container {
 	width: 840px;
 }
@@ -17,7 +18,18 @@
 }
 
 /* Common screens */
+.screen-header {
+	margin-bottom: 2em;
+}
+
 .stats-container h4 {
 	margin-top: 0;
 	text-decoration: underline;
+}
+.stats-container .note {
+	border-top: 1px #DDD solid;
+	padding-top: .7em;
+	margin-top: 3em;
+	font-size: 14px;
+	color: #333;
 }
