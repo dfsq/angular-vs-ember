@@ -1,5 +1,7 @@
 # AngularJS vs EmberJS comparison
 
-View the [stats demo][1].
+Little fun app demonstrating popularity of two frameworks, using Stackoverflow questions metrics.
 
-[1]: http://dfsq.github.io/angular-vs-ember/#/questions
+View the [stats][1].
+
+[1]: http://dfsq.github.io/angular-vs-ember/

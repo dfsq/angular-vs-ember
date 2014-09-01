@@ -11,9 +11,7 @@
 		'ngRoute',
 		'angularCharts',
 		'ae.components.services',
-		'ae.questions',
-		'ae.answers',
-		'ae.followers'
+		'ae.questions'
 	], config);
 })();
 
