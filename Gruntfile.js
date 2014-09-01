@@ -48,6 +48,7 @@ module.exports = function(grunt) {
 			},
 			vendors: {
 				src: [
+					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/angular/angular.min.js',
 					'bower_components/angular-route/angular-route.min.js',
 					'bower_components/d3/d3.min.js',
