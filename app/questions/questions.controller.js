@@ -3,8 +3,6 @@
 
 	function questionsController($scope, tagsData) {
 
-		console.log('TEST', tagsData);
-
 		var total = {
 			angular: tagsData.total[0].count,
 			ember:   tagsData.total[1].count
