@@ -26,6 +26,10 @@
 .screen-header {
 	margin-bottom: 2em;
 }
+.screen-header code {
+	background: none;
+	padding: 2px 1px;
+}
 
 .stats-container h4 {
 	margin-top: 0;
