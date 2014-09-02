@@ -14,8 +14,8 @@
 
 /* Chart styles */
 .chart {
-	width: 400px;
-	height: 400px;
+	width: 460px;
+	height: 430px;
 }
 
 .ac-legend td {
@@ -42,6 +42,7 @@
 	font-size: 14px;
 	color: #333;
 }
-.stats-container .note b {
+
+.note b {
 	color: #666;
 }

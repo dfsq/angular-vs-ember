@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 						'git init',
 						'git remote add -t gh-pages -f origin https://github.com/dfsq/angular-vs-ember.git',
 						'git checkout gh-pages',
-						'ls | grep -v ".git" | xargs rm -r',
+						'git rm -r *',
 						'cp -r ../dist/* ./',
 						'git add .',
 						'git commit -m ' + message,
