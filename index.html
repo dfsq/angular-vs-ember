@@ -16,20 +16,23 @@
 	<meta name="twitter:title" content="StackOverflow Questions: AngularJS vs EmberJS">
 	<meta name="twitter:description" content="Simple chart representation of statistics on the number of StackOverflow questions asked within angularjs and ember.js tags.">
 	<meta name="twitter:image" content="http://dfsq.github.io/angular-vs-ember/assets/images/stats160.png">
-	<title>Angular vs Ember</title>
+	<title>Angular, Backbone and Ember</title>
 </head>
 <body ng-app="ae" ng-controller="appController as app">
 
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
-		<h2>StackOverflow Questions: AngularJS vs EmberJS</h2>
+		<h2>StackOverflow: Angular, Backbone and Ember</h2>
 	</div>
 </nav>
 
 <div class="container">
 	<div ng-view></div>
 	<hr/>
-	<div class="text-left">Suggestions and comments on what above numbers mean, are very welcome.</div>
+	<div class="note">
+		<p><b>Note 1:</b> "answered" shows that those questions received at least one answer. However it doesn't mean that given answers were accepted.</p>
+		<p><b>Note 2:</b> I originally planed to compare Angular and Ember only, however I think now that it's worth adding the third most popular framework too.</p>
+	</div>
 </div>
 
 <a href="https://github.com/dfsq/angular-vs-ember">
