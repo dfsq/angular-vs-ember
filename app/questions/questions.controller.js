@@ -5,14 +5,17 @@
 
 		var total = {
 			angular: tagsData.total[0].count,
-			ember:   tagsData.total[1].count
+			backbone: tagsData.total[1].count,
+			ember:   tagsData.total[2].count
 		},
 		answered = {
 			angular: total.angular - tagsData.noAnswerAngular,
+			backbone: total.backbone - tagsData.noAnswerBackbone,
 			ember:   total.ember - tagsData.noAnswerEmber
 		},
 		noAnswer = {
 			angular: tagsData.noAnswerAngular,
+			backbone: tagsData.noAnswerBackbone,
 			ember:   tagsData.noAnswerEmber
 		};
 
@@ -39,6 +42,9 @@
 				x: 'AngularJS',
 				y: [total.angular, answered.angular, noAnswer.angular]
 			}, {
+				x: 'BackboneJS',
+				y: [total.backbone, answered.backbone, noAnswer.backbone]
+			},{
 				x: 'EmberJS',
 				y: [total.ember, answered.ember, noAnswer.ember]
 			}]
