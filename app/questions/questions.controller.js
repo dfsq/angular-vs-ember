@@ -33,7 +33,8 @@
 				display: true,
 				position: 'right'
 			},
-			lineLegend: 'lineEnd'
+			lineLegend: 'lineEnd',
+			colors: ['#4682B4', '#F90', '#DC3912']
 		};
 
 		$scope.chartData = {
