@@ -2,22 +2,19 @@
 	'use strict';
 
 	function questionsController($scope, tagsData) {
-    console.log(tagsData);
+
 		var total = {
-			angular: tagsData.total.angularjs.count,
-      angular2: tagsData.total.angular2.count,
-			backbone: tagsData.total['backbone.js'].count,
-			ember:   tagsData.total['ember.js'].count
+			angular: tagsData.total[0].count,
+			backbone: tagsData.total[1].count,
+			ember:   tagsData.total[2].count
 		},
 		answered = {
 			angular: total.angular - tagsData.noAnswerAngular,
-      angular2: total.angular2 - tagsData.noAnswerAngular2,
 			backbone: total.backbone - tagsData.noAnswerBackbone,
 			ember:   total.ember - tagsData.noAnswerEmber
 		},
 		noAnswer = {
 			angular: tagsData.noAnswerAngular,
-      angular2: tagsData.noAnswerAngular2,
 			backbone: tagsData.noAnswerBackbone,
 			ember:   tagsData.noAnswerEmber
 		};
@@ -43,12 +40,9 @@
 		$scope.chartData = {
 			series: ['Total', 'Answered', 'No answer'],
 			data: [{
-				x: 'Angular',
+				x: 'AngularJS',
 				y: [total.angular, answered.angular, noAnswer.angular]
 			}, {
-        x: 'Angular2',
-        y: [total.angular2, answered.angular2, noAnswer.angular2]
-      }, {
 				x: 'BackboneJS',
 				y: [total.backbone, answered.backbone, noAnswer.backbone]
 			},{

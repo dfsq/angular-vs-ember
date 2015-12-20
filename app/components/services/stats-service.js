@@ -14,24 +14,17 @@
 					sort:  'name',
 					site:  'stackoverflow'
 				}},
-				total, noAnswerAngular, noAnswerAngular2, noAnswerBackbone, noAnswerEmber;
+				total, noAnswerAngular, noAnswerBackbone, noAnswerEmber;
 
 				// Total number of questions in the tag
-				total = $http.get(base + '/tags/angularjs;angular2;backbone.js;ember.js/info', config).then(function(response) {
-					return response.data.items.reduce(function(prev, curr) {
-            prev[curr.name] = curr;
-            return prev;
-          }, {});
+				total = $http.get(base + '/tags/angularjs;backbone.js;ember.js/info', config).then(function(response) {
+					return response.data.items;
 				});
 
 				// Only questions with no answer given
 				noAnswerAngular = $http.get(base + '/questions/no-answers?site=stackoverflow&tagged=angularjs&filter=total').then(function(response) {
 					return response.data.total;
 				});
-
-        noAnswerAngular2 = $http.get(base + '/questions/no-answers?site=stackoverflow&tagged=angular2&filter=total').then(function(response) {
-          return response.data.total;
-        });
 
 				noAnswerBackbone = $http.get(base + '/questions/no-answers?site=stackoverflow&tagged=backbone.js&filter=total').then(function(response) {
 					return response.data.total;
@@ -44,7 +37,6 @@
 				return $q.all({
 					total: total,
 					noAnswerAngular: noAnswerAngular,
-          noAnswerAngular2: noAnswerAngular2,
 					noAnswerBackbone: noAnswerBackbone,
 					noAnswerEmber: noAnswerEmber
 				});
